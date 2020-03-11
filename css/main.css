@@ -1,0 +1,514 @@
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-color: gray;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.gold-text{
+    color: goldenrod;
+}
+
+.wrapper{
+    max-width: 2560px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wrapper h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.underline{
+    margin: 0 auto 40px;
+    width: 80px;
+    height: 4px;
+    background-color: goldenrod;
+}
+
+.scroll-fix::before{
+    content: '';
+    display: block;
+    height: 66px;
+    margin-top: -66px;
+}
+
+.visibility{
+    visibility: hidden;  
+}
+
+.jumbotron{
+    margin: 0;
+}
+
+/* NAWIGACJA */
+
+nav{
+    text-transform: uppercase;
+    -webkit-transition: background-color .6s;
+    transition: background-color .6s;
+}
+
+nav .navbar-brand{
+    font-weight: bold;
+}
+
+nav a, nav i{
+    color: #ffffff;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+nav i{
+    padding: 10px;
+}
+nav a:hover{
+    color: #ffffff;
+}
+
+nav .active{
+    color: goldenrod;
+}
+
+.shadow-bg{
+    background-color: rgba(0,0,0, .9);
+}
+
+/* HEADER */
+
+header{
+    color: #ffffff;
+    overflow: hidden;
+}
+
+header h1{
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+header .hero-img{
+    position: relative;
+    height: 100vh;
+    background-image: url('../img/hero-img-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+header .hero-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: -1;
+}
+
+header .hero-txt{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+header .hero-text p{
+    padding: 10px;
+    font-size: 14px;
+}
+
+header .btn-outline-light{
+    text-transform: uppercase;
+}
+
+header .fa-chevron-down{
+    display: none;
+}
+
+/* MAIN */
+
+#aboutus{
+    overflow: hidden;
+}
+
+#aboutus i{
+    margin-top: 20px;
+    font-size: 30px;
+}
+  
+#aboutus h3{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+  
+#aboutus p{
+    font-size: 14px;
+}
+
+#aboutus .aboutus-hover{
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+#aboutus .aboutus-hover:hover{
+    color: goldenrod;
+}
+
+#aboutus-hero{
+    color: #ffffff;
+    overflow: hidden;
+}
+
+#aboutus-hero .jumbotron{
+    position: relative;
+    padding: 60px 0;
+    background-image: url('../img/about-hero.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+#aboutus-hero .jumbotron h2{
+    font-size: 32px;
+}
+
+#aboutus-hero .jumbotron i{
+    font-size: 35px;
+}
+
+#aboutus-hero .jumbotron p{
+    font-size: 15px;
+}
+
+#aboutus-hero .about-shadow{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: -1;
+}
+
+#about-hero .about-hero-item{
+    margin: 10px 0;
+}
+
+/* PORTFOLIO */
+
+#portfolio .carousel-item{
+    position: relative;
+    height: 600px;
+}
+
+#portfolio .carousel-item img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+#portfolio .carousel-caption{
+    position: absolute;
+    background-color: rgba(0,0,0,.8);
+    left: 0;
+    right: 0;
+    padding: 40px 0;
+}
+
+#portfolio .carousel-indicators{
+    padding-bottom: 20px;
+}
+
+/* CENY */
+
+#prices .jumbotron{
+    background-color: #f9f9f9; 
+}
+
+#prices .price-wrap{
+    max-width: 2560px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#prices .price-box{
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.6);
+    margin: 20px 10px;
+    padding: 30px;
+    transition: transform .3s;
+}
+
+#prices .price-box:hover{
+    transform: scale(1.05);
+}
+
+#prices h3{
+    text-transform: uppercase;
+    color: goldenrod;
+}
+
+#prices span{
+    font-weight: bold;
+}
+
+#prices i{
+    font-size: 23px;
+    padding: 0 5px;
+}
+
+#prices button{
+    padding: 10px -20px;
+    text-transform: uppercase;
+}
+
+#prices .price{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#prices .price-text{
+    margin-top: 30px;
+    padding: 25px;
+}
+
+#prices .price-text a{
+    color: goldenrod;
+}
+
+/* TEAM */
+
+#team .jumbotron{
+    position: relative;
+    background-image: url('../img/room-hero.jpg');
+    background-attachment:  fixed;
+    background-size: cover;
+    z-index: 0;
+}
+
+#team .jumbotron h2{
+    color: #ffffff;
+}
+
+#team .team-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,.8);
+}
+
+#team .card img{
+    height: 300px;
+    object-fit: cover;
+}
+
+#team .card i{
+    padding: 10px 20px;
+}
+
+#team .card{
+    transition: transform .3s;
+}
+
+#team .card:hover{
+    transform: scale(.96);
+}
+
+#team .card-footer i{
+    color: black;
+    transition: transform .3s;
+}
+
+#team .card-footer i:hover{
+    transform: scale(1.8);
+}
+
+#team .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#team .card-body{
+    height: 150px;
+}
+
+#team .card-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+#team .card-text{
+    font-size: 15px;
+}
+
+/* OSIĄGNIĘCIA */
+
+#achievements .achievement{
+    padding: 20px 0;
+}
+
+#achievements .achievement-list{
+    text-align: center;
+}
+
+#achievements i{
+    font-size: 48px;
+    padding: 10px;
+    color: #ffffff;
+    text-shadow: 0 3px 5px black;
+}
+
+#achievements .achievement-number{
+    font-size: 22px;
+}
+
+#achievements .achievement-text{
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* KONTAKT */
+
+#contact .jumbotron{
+    position: relative;
+    background-image: url('../img/contact-hero.jpg');
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+}
+
+#contact .contact-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,.65);
+    z-index: -1;
+}
+
+#contact .jumbotron h2{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#contact .jumbotron .underline{
+    /* background-color: #ffffff; */
+    background-color: goldenrod;
+}
+
+#contact .contact-us{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+#contact .contact-item{
+    margin: 30px 0; 
+}
+
+#contact .contact-us .contact-item h3{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+#contact .contact-us .contact-item .social-media{
+    font-size: 26px;
+}
+
+#contact .contact-us .contact-item .social-media a{
+    padding: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 5px black;
+}
+
+#contact .contact-us .contact-item .social-media a:hover{
+    color: goldenrod;
+}
+
+#contact .contact-us .contact-item .social-media i{
+    transition: transform .3s;
+}
+
+#contact .contact-us .contact-item .social-media i:hover{
+    transform: scale(1.3);
+}
+
+/* FOOTER */
+
+footer{
+    background-color: black;
+}
+
+footer p{
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media (min-width: 375px){
+    header h1{
+        font-size: 36px;
+    }
+    
+    header .hero-text p{
+        font-size: 16px;
+    }
+    
+    #aboutus-hero .jumbotron h2{
+        font-size: 36px;
+    }
+
+    #aboutus-hero .jumbotron h3{
+        font-size: 32px;
+    }
+    
+    #aboutus-hero .jumbotron p{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 414px){    
+    #aboutus-hero .jumbotron{
+        padding: 80px 0;
+    }
+}
+
+@media (min-width: 500px){    
+    #team .card-body{
+        height: 120px;
+    }
+}
